@@ -6,4 +6,6 @@ We will be developing an employee management system that serves as a way to simp
 
 Employee Attributes to collect: First Name, Last Name, Social Security, Address, Phone Number, Emergency Contact(Goes with Phone Number), Role
 
-Currently, the program will the in the form of a website accessible by employees and managers. Employees and managers will have separate login pages. Both employees and managers will be able to login and access their information. Managers would also be able to make changes to employee information.
+Currently, the program will the in the form of a website accessible by employees and managers. Employees and managers will have separate login pages. An option to add new employees will be found on the manager login page.
+
+Both employees and managers will be able to login and access their information. Managers would also be able to make changes to employee information.
