@@ -1,0 +1,33 @@
+body{
+	background-color: #D99595;
+}
+
+h1{
+	color: black;
+	text-align: center;
+}
+
+div {
+	position: absolute;
+	text-align: center;
+	right: 0px;
+	top: 0px;
+	height: 1000px;
+	width: 200px;
+	background-color: #959595;
+}
+
+#login_e {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #b88f8f;
+	font-size: 20px;
+}
+
+#login_m {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #b88f8f;
+	font-size: 20px;
+
+}
