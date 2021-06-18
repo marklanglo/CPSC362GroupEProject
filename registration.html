@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        
 		<link rel="stylesheet" href="registration.css">
 		<meta charset="utf-8">
 		<title>Employee Registration</title>
@@ -14,9 +15,11 @@
 		<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 		<!------ Include the above in your HEAD tag ---------->
 
+        
 	</head>
 	<body bgcolor='#ec7063'>
 		<div class="container">
+            <form action="/registration" method="POST"> <!-- Added -->
             <form class="form-horizontal" role="form">
                 <h2>Employee Registration</h2>
                 <div class="form-group">
@@ -104,7 +107,8 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form> <!-- /form -->
+        </form> <!-- Added -->
         </div> <!-- ./container -->
-		<a href ="/">Return to the home page</a>
+		<a href ="/home">Return to the home page</a>
 	</body>
 </html>

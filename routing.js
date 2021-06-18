@@ -93,7 +93,8 @@ app.get("/", function (req, resp) {
 			console.log(req.session.username);
 		 resp.redirect('/home');
 	} else {
-		resp.sendFile(__dirname + "/login.html");
+		//resp.sendFile(__dirname + "/login.html");
+		resp.sendFile(__dirname + "/home.html");
 	}
 });
 
