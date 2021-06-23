@@ -138,7 +138,7 @@ app.post("/registration", function (req, resp) {
 			//to check if user is persent or not
 			console.log(result);
 			if (result.length<=0){
-				mysqlConn.query("INSERT INTO `user` VALUES (?,?,?,?,md5(?))",[username,fname,lname,address,password],
+				mysqlConn.query("INSERT INTO `user` VALUES (?,?,?,?,md5(?),?,?,?,?,?)",[username,fname,lname,address,password,jobTitle, socialSecurityNum, phoneNumber, email, sex],
 				function(err, result){
 					if(err) throw err;
 					let pagehtml= tophtml(username);
