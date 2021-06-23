@@ -11,6 +11,11 @@ CREATE TABLE `user` (
   `lname` varchar(45) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `password` varchar(32) NOT NULL,
+  `jobTitle` varchar(60) NOT NULL,
+  `socialSecurityNum` varchar(10) NOT NULL,
+  `phoneNumber` varchar(12) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `sex` varchar(7) NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `username_UNIQUE` (`username`)
 );
