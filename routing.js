@@ -125,6 +125,11 @@ app.post("/registration", function (req, resp) {
 	let lname = xssFilters.inHTMLData(req.body.firstName);
 	let address = xssFilters.inHTMLData(req.body.address);
 	let password = xssFilters.inHTMLData(req.body.password);
+	let jobTitle = xssFilters.inHTMLData(req.body.jobTitle);
+	let socialSecurityNum = xssFilters.inHTMLData(req.body.socialSecurityNum);
+	let phoneNumber = xssFilters.inHTMLData(req.body.phoneNumber);
+	let email = xssFilters.inHTMLData(req.body.email);
+	let sex = xssFilters.inHTMLData(req.body.sex);
 	if(nameregex.test(fname ) && nameregex.test(lname) && usernameregex.test(username)&& addressregex.test(address)){
 
 		mysqlConn.query("SELECT `username` from `user` where `username`= ?",[username],
