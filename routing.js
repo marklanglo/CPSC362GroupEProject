@@ -130,31 +130,42 @@ app.post("/registration", function (req, resp) {
 	let phoneNumber = xssFilters.inHTMLData(req.body.phoneNumber);
 	let email = xssFilters.inHTMLData(req.body.email);
 	let sex = xssFilters.inHTMLData(req.body.sex);
-	if(nameregex.test(fname ) && nameregex.test(lname) && usernameregex.test(username)&& addressregex.test(address)){
 
-		mysqlConn.query("SELECT `username` from `user` where `username`= ?",[username],
-		function(err, result){
-			if(err) throw err;
-			//to check if user is persent or not
+	if(nameregex.test(fname ) && nameregex.test(lname) && usernameregex.test(username) && addressregex.test(address)){
+
+		mysqlConn.query("SELECT `username` from `user` where `username`= ?",[username, fname, lname, address, password, jobTitle, socialSecurityNum, phoneNumber, email, sex],
+		
+		// Check if user is present or not.
+		function(err, result) {
+
+			if(err)
+				throw err;
 			console.log(result);
-			if (result.length<=0){
-				mysqlConn.query("INSERT INTO `user` VALUES (?,?,?,?,md5(?),?,?,?,?,?)",[username,fname,lname,address,password,jobTitle, socialSecurityNum, phoneNumber, email, sex],
-				function(err, result){
+
+			if (result.length <= 0) {
+
+				mysqlConn.query("INSERT INTO `user` VALUES (?,?,?,?,md5(?),?,?,?,?,?)",[username, fname, lname, address, password, jobTitle, socialSecurityNum, phoneNumber, email, sex],
+				
+				function(err, result) {
+
 					if(err) throw err;
 					let pagehtml= tophtml(username);
 					pagehtml+="<div>Thank you, "+ xssFilters.inHTMLData(username)+" for registering. You may now login.<div>";
 					pagehtml+="<a href='/'>Click here to login.<a></body> </html>";;
-					resp.send(pagehtml)
+					resp.send(pagehtml);
+
 				});
-			}else{
+
+			} else{
+
 				console.log(username);
 				console.log("ERROR: Username is already present.");
 				resp.sendFile(__dirname + "/Error.html");
 
 			}
 			});
-	}else{
-		console.log("Invalid input's provided");
+	} else{
+		console.log("Invalid inputs provided.");
 		resp.sendFile(__dirname + "/Error.html");
 	}
 

@@ -1,3 +1,5 @@
+UNLOCK TABLES;
+
 DROP DATABASE IF EXISTS `employees`;
 
 CREATE DATABASE IF NOT EXISTS `employees`;
@@ -27,7 +29,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('dd','dd','dd','ddd','1aabac6d068eef6a7bad3fdf50a05cc8'),('dd1','qqw','qqw','qwq','0a93c4e8557cb6897b438861e21c55ee'),('dhruv','dhruv','patel','fullerton','1aabac6d068eef6a7bad3fdf50a05cc8'),('dhruv123','dhruv','patel','Ca','7199101025e18e6f160d764a7ca71180'),('dhruvtest','dhruv','patel','Ca','7199101025e18e6f160d764a7ca71180');
+INSERT INTO `user` VALUES ('dd','dd','dd','ddd','password', 'jobTitle', 'socialSecurityNum', 'phoneNumber', 'email', 'sex'),('dd1','qqw','qqw','qwq','0a93c4e8557cb6897b438861e21c55ee', 'jobTitle', 'socialSecurityNum', 'phoneNumber', 'email', 'sex'),('dhruv','dhruv','patel','fullerton','1aabac6d068eef6a7bad3fdf50a05cc8', 'jobTitle', 'socialSecurityNum', 'phoneNumber', 'email', 'sex'),('dhruv123','dhruv','patel','Ca','7199101025e18e6f160d764a7ca71180', 'jobTitle', 'socialSecurityNum', 'phoneNumber', 'email', 'sex'),('dhruvtest','dhruv','patel','Ca','7199101025e18e6f160d764a7ca71180', 'jobTitle', 'socialSecurityNum', 'phoneNumber', 'email', 'sex');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
