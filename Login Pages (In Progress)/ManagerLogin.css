@@ -1,3 +1,10 @@
+body
+{
+    background-image: url(https://images.unsplash.com/photo-1610307766999-01f45d259959?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmclMjBpbiUyMGJhY2tncm91bmR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1 
 { 
     text-align: center;
@@ -7,7 +14,7 @@ h1
 
 div 
 { 
-    background-color: white;
+    background-color: clear;
 }
 
 form  
