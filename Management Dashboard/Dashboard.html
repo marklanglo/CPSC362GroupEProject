@@ -28,7 +28,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #2d63ba">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -36,6 +36,12 @@
                     <i class=""></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Management Portal</div>
+                <a href="#" id="userDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="mr-2 d-none d-lg-inline small"></span>
+                    <img class="img-profile rounded-circle"
+                         src="img/undraw_profile_pic_ic5t.svg" width="160" height="160" style="padding-left: 56px">
+                </a>
             </a>
 
             <!-- Divider -->
@@ -65,7 +71,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Manage Employees</h6>
+                        <h6 class="collapse-header" style="color: #23437a">Manage Employees</h6>
                         <a class="collapse-item" href="#">Salaries</a>
                         <a class="collapse-item" href="#">Shifts</a>
                         <a class="collapse-item" href="#">Add Employee</a>
@@ -99,7 +105,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Manage Documents</h6>
+                        <h6 class="collapse-header" style="color: #23437a">Manage Documents</h6>
                         <a class="collapse-item" href="#">Upload</a>
                         <a class="collapse-item" href="#">Search</a>
                         <a class="collapse-item" href="#">Other</a>
@@ -166,7 +172,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
+                            <div class="input-group-append" style="color: #23437a">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
@@ -191,9 +197,10 @@
                                         <input type="text" class="form-control bg-light border-0 small"
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
+                                        <div class="input-group-append " style="background-color: #23437a">
+                                            <button class="btn" type="button" style="background-color: #23437a">
+                                                <i class="fas fa-search"></i>
+                                                <i class="fas fa-search"></i>
                                             </button>
                                         </div>
                                     </div>
@@ -301,7 +308,35 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="row">
+                        <div class="my-3 p-3 bg-white rounded box-shadow">
+                            <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+                            <div class="media text-muted pt-3">
+                                <img alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" src="img/undraw_profile_pic_ic5t.svg" data-holder-rendered="true">
+                                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <strong class="d-block text-gray-dark">John</strong>
+                                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.Donec id elit non mi porta gravida at eget metus.
+                                </p>
+                            </div>
+                            <div class="media text-muted pt-3">
+                                <img alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" src="img/undraw_profile_1.svg" data-holder-rendered="true">
+                                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <strong class="d-block text-gray-dark">Karen</strong>
+                                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.Donec id elit non mi porta gravida at eget metus.
+                                </p>
+                            </div>
+                            <div class="media text-muted pt-3">
+                                <img alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" src="img/undraw_profile_pic_ic5t.svg" data-holder-rendered="true">
+                                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <strong class="d-block text-gray-dark">User</strong>
+                                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.Donec id elit non mi porta gravida at eget metus.
+                                </p>
+                            </div>
+                            <small class="d-block text-right mt-3">
+                                <a href="#" style="color: deepskyblue;">View all updates</a>
+                            </small>
+                        </div>
+                    </div>
                     <!-- Content Row -->
 
                     <div class="row">
