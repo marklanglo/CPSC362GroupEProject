@@ -1,5 +1,4 @@
 body {
-    background: url('https://assets.weforum.org/article/image/v2gQQH6Qq5EAJSemo1Yqie27aYBOHE4pSwA6jSkFHKg.jpg') fixed;
    background-size: cover;
 }
 
@@ -18,6 +17,5 @@ body {
    color: #000000;
    margin-top: 5%;
    text-align: center;
-   text-transform: uppercase;
    letter-spacing: 4px;
 }
