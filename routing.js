@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const mysql = require('mysql');
 const session = require('express-session');
 const xssFilters = require('xss-filters');
-const csp = require('helmet-csp');
+//const csp = require('helmet-csp');
 // instantiate express
 const app = express();
 //database Connection
@@ -68,11 +68,13 @@ function GenrateAccountnumber(){
 
 // needed to parse req body
 app.use(express.urlencoded({ extended: true }));
+/*
 app.use(csp({
   directives: {
     defaultSrc: ["'self'"],
     scriptSrc: ["'self'"],
   }}))
+*/
 
 app.use(session({
 	   cookieName: 'session',
