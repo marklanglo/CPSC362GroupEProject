@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="Contact.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Contact Us</title>
+	<link rel="stylesheet" href="test.css">
 </head>
 <body>
 
 <h3>Contact Form</h3>
 
-<div class="container">
-  <form action="/action_page.php">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your Name..">
-	<label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your Email..">
-    <label for="id">Employee ID</label>
-    <input type="text" id="id" name="id" placeholder="Your Employee ID...">
 
-    <label for="manager">Manager</label>
-    <select id="manager" name="manager">
-      <option value="general">General</option>
-      <option value="Mike">Mike E.</option>
-      <option value="Yousuf">Yousuf I.</option>
-	  <option value="Valarie">Valarie G.</option>
-    </select>
+    <div>
+        <div>
+            <input type="text" id="txtName" placeholder="Your Name..." />
+        </div>
+        <div>
+            <input type="text" id="txtID" placeholder="Your Employee ID..." />
+        </div>
+        <div>
+            <input type="text" id="txtEmail" placeholder="Your Email..." />
+        </div>
+        <div>
+            <select id="manager">
+                <option selected value="">Select Manager</option>
+                <option value="General">General</option>
+				<option value="Mike">Mike E.</option>
+                <option value="Yousuf">Yousuf I.</option>
+                <option value="Valarie">Valarie G.</option>
+            </select>
+        </div>
+        <div>
+            <textarea id="msg" name="msg" placeholder="Your Message..." style="height:100px"></textarea>
+        </div>
+        <div>
+            <input type="button" id="bt" value="Submit" onclick="saveFile()" />
+        </div>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" href="home.html" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit" href="home.html">
-  </form>
-</div>
-
+    </div>
 </body>
+<script>
+    let saveFile = () => {
+    	
+    	const name = document.getElementById('txtName');
+        const ID = document.getElementById('txtID');
+        const email = document.getElementById('txtEmail');
+        const manager = document.getElementById('manager');
+        const msg = document.getElementById('msg');
+        
+        let data = 
+            '\r Name: ' + name.value + ' \r\n ' + 
+            'ID: ' + ID.value + ' \r\n ' + 
+            'Email: ' + email.value + ' \r\n ' + 
+            'Manager: ' + manager.value + ' \r\n ' + 
+            'Message: ' + msg.value;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
 </html>
