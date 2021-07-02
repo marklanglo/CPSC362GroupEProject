@@ -100,11 +100,23 @@ app.get("/", function (req, resp) {
 	}
 });
 
-app.get("/home", function (req, resp) {
+app.get("/emp_home", function (req, resp) {
+
+	if(req.session.loggedin===true) {
+    	resp.sendFile(__dirname + "/index.html");
+	}else{
+		//resp.sendFile(__dirname + "/emp_login.html");
+		resp.sendFile(__dirname + "/EmployeeLogin.html");
+	}
+
+});
+
+app.get("/manage_home", function (req, resp) {
 	if(req.session.loggedin===true){
     	resp.sendFile(__dirname + "/index.html");
 	}else{
-		resp.sendFile(__dirname + "/login.html");
+		//resp.sendFile(__dirname + "/manage_login.html");
+		resp.sendFile(__dirname + "/ManagerLogin.html");
 	}
 });
 
